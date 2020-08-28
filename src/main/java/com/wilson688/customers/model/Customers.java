@@ -1,12 +1,12 @@
 package com.wilson688.customers.model;
 
-import com.sun.istack.NotNull;
 import lombok.Data;
 import lombok.ToString;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Data
 @Entity
@@ -20,6 +20,7 @@ public class Customers {
 
 
     @Column
+    @NotNull(message="{NotNull.Customers.firstName")
     private String firstName;
 
     @Column
